@@ -66,7 +66,6 @@ class CarsController extends Controller
     public function show(int $id): View|Factory|Application
     {
         $car = Car::find($id);
-
         return view('cars.show')->with('car', $car);
     }
 
