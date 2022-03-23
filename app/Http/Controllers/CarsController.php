@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CarModel;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -66,7 +67,9 @@ class CarsController extends Controller
     public function show(int $id): View|Factory|Application
     {
         $car = Car::find($id);
-        return view('cars.show')->with('car', $car);
+        //dd($car); zum car ansicht testen
+        //dd($car->carModels); zum carModels ansicht testen
+        return view('cars.show')->with('car', $car );
     }
 
     /**
